@@ -202,6 +202,13 @@ function onEdit(ele) {
         
         addBlogs.classList.add("d-none")     
         updateBlogs.classList.remove("d-none")
+
+        form.scrollIntoView({
+        behavior: "auto",
+        block: "start"
+    })
+
+
     })
     .catch(err=>{
         cl(err)
@@ -265,6 +272,11 @@ function onblogupdate() {
         form.reset()
         addBlogs.classList.remove("d-none")
         updateBlogs.classList.add("d-none")
+
+        form.scrollIntoView({
+        behavior: "auto",
+        block: "start"
+    })
 
     })
     .catch(err=>{
