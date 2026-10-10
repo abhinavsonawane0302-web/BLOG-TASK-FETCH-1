@@ -18,7 +18,7 @@ const BLOGS_URL =`${BASE_URL}/bloges.json`
 function snackbar(msg,icon) {
     Swal.fire({
         title:msg,
-        icon:"success",
+        icon: icon,
         timer:2000
     })
     
@@ -306,7 +306,7 @@ function onDelete(ele) {
         confirmButtonText: "yes,delete it!"
     }) 
     .then((result)=>{
-        if(result.isConfirmed){
+        if(result.isConfirmed){ 
             spinnershow()
 
             fetch(DELETE_URL,{
